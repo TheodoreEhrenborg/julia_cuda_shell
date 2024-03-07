@@ -24,7 +24,6 @@
                           ];
       CUDA_PATH=pkgs.cudatoolkit;
       LD_LIBRARY_PATH="/run/opengl-driver/lib";
-      EXTRA_CCFLAGS="-I/usr/include";
           };
         }
       );
