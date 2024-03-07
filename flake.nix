@@ -19,12 +19,10 @@
         {
           devShells.default = mkShell {
             buildInputs = [
-     cudatoolkit linuxPackages.nvidia_x11
-     libGLU libGL
-     xorg.libXi xorg.libXmu freeglut
-     pkgs-stable.julia
+                            cudatoolkit
+                            pkgs-stable.julia
                           ];
-    CUDA_PATH=pkgs.cudatoolkit;
+      CUDA_PATH=pkgs.cudatoolkit;
       LD_LIBRARY_PATH="/run/opengl-driver/lib";
       EXTRA_CCFLAGS="-I/usr/include";
           };
