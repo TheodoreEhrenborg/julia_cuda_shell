@@ -22,7 +22,6 @@
                             cudatoolkit
                             pkgs-stable.julia
                           ];
-      CUDA_PATH=pkgs.cudatoolkit;
       LD_LIBRARY_PATH="/run/opengl-driver/lib";
           };
         }
