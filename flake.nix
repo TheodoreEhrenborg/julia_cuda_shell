@@ -29,9 +29,7 @@
      pkgs-stable.julia
                           ];
     CUDA_PATH=pkgs.cudatoolkit;
-      #LD_LIBRARY_PATH="${pkgs.linuxPackages.nvidia_x11}/lib:${pkgs.ncurses5}/lib";
       LD_LIBRARY_PATH="/run/opengl-driver/lib";
-      #EXTRA_LDFLAGS="-L/lib -L${pkgs.linuxPackages.nvidia_x11}/lib";
       EXTRA_CCFLAGS="-I/usr/include";
           };
         }
