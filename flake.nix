@@ -21,8 +21,11 @@
             buildInputs = [
                             cudatoolkit
                             pkgs-stable.julia
+pkgs-stable.cudaPackages.cuda_sanitizer_api
+pkgs-stable.cudaPackages.cuda_cudart
+                            nvtop
                           ];
-      LD_LIBRARY_PATH="/run/opengl-driver/lib";
+            LD_LIBRARY_PATH="/run/opengl-driver/lib:${pkgs-stable.cudaPackages.cuda_cudart}/lib";
           };
         }
       );
