@@ -1,3 +1,4 @@
+# Taken from https://fluxml.ai/Flux.jl/stable/models/quickstart/
 # This will prompt if neccessary to install everything, including CUDA:
 using Flux, CUDA, Statistics, ProgressMeter
 
