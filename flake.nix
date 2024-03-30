@@ -22,11 +22,11 @@
                             stdenv.cc.cc.lib
                             cudatoolkit
                             julia
-                            pkgs-stable.cudaPackages.cuda_sanitizer_api
-                            pkgs-stable.cudaPackages.cuda_cudart
+                            cudaPackages.cuda_sanitizer_api
+                            cudaPackages.cuda_cudart
                             nvtop
                           ];
-            LD_LIBRARY_PATH="${stdenv.cc.cc.lib}/lib:/run/opengl-driver/lib:${pkgs-stable.cudaPackages.cuda_cudart}/lib";
+            LD_LIBRARY_PATH="${stdenv.cc.cc.lib}/lib:/run/opengl-driver/lib:${cudaPackages.cuda_cudart}/lib";
           };
         }
       );
