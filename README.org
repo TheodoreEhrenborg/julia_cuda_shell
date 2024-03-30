@@ -1,3 +1,8 @@
-#+title: Readme
+#+title: julia_cuda_shell
+Provides a nix shell that allows you to run Julia on the GPU
+* Usage
+Use direnv or ~nix develop~ once you're in the directory
+* Setup
 - Use a local CUDA as in https://cuda.juliagpu.org/stable/installation/overview/#Using-a-local-CUDA
-- Only Julia 1.9 works---julia 1.10 complains about missing a library when installing Flux; this may be fixable
+* Limitations
+- Only Julia 1.9 works---Julia 1.10 complains about missing a library when installing Flux; this may be fixable
