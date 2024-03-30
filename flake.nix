@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs/ab5b6828af26215";
+    nixpkgs.url = "nixpkgs/807c549feabc";
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-23.11";
     flake-utils.url = "github:numtide/flake-utils";
   };
@@ -19,13 +19,14 @@
         {
           devShells.default = mkShell {
             buildInputs = [
+                            stdenv.cc.cc.lib
                             cudatoolkit
-                            pkgs-stable.julia
+                            julia
                             pkgs-stable.cudaPackages.cuda_sanitizer_api
                             pkgs-stable.cudaPackages.cuda_cudart
                             nvtop
                           ];
-            LD_LIBRARY_PATH="/run/opengl-driver/lib:${pkgs-stable.cudaPackages.cuda_cudart}/lib";
+            LD_LIBRARY_PATH="${stdenv.cc.cc.lib}/lib:/run/opengl-driver/lib:${pkgs-stable.cudaPackages.cuda_cudart}/lib";
           };
         }
       );
