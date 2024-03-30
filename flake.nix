@@ -1,17 +1,13 @@
 {
   inputs = {
     nixpkgs.url = "nixpkgs/807c549feabc";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-23.11";
     flake-utils.url = "github:numtide/flake-utils";
   };
-  outputs = { self, nixpkgs, flake-utils, nixpkgs-stable}:
+  outputs = { self, nixpkgs, flake-utils}:
     flake-utils.lib.eachDefaultSystem
       (system:
         let
           pkgs = import nixpkgs {
-            inherit system;
-          };
-          pkgs-stable = import nixpkgs-stable {
             inherit system;
           };
         in
